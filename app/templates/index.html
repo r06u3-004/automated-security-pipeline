@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TechShop</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: auto;
+            padding: 40px;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .product {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>TechShop</h1>
+
+    <p>Mini plateforme e-commerce DevSecOps</p>
+
+    <div class="products">
+
+        {% for product in products %}
+
+        <div class="product">
+
+            <h2>{{ product.name }}</h2>
+
+            <p>
+                Catégorie :
+                {{ product.category }}
+            </p>
+
+            <strong>
+                {{ product.price }} FCFA
+            </strong>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</body>
+</html>

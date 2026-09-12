@@ -1,0 +1,16 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Environment and secrets
+.env
+
+# Git
+.git/
+
+# Temporary files
+*.tmp
+*.log
+*~
